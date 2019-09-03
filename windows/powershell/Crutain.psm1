@@ -44,7 +44,7 @@ function Write-Theme {
         $themeInfo = Get-VcsInfo -status ($status)
         $lastColor = $themeInfo.BackgroundColor
         $prompt += Write-Prompt -Object $($sl.PromptSymbols.SegmentForwardSymbol) -ForegroundColor $sl.Colors.PromptBackgroundColor -BackgroundColor $lastColor
-        $prompt += Write-Prompt -Object " $($themeInfo.VcInfo) " -BackgroundColor $lastColor -ForegroundColor $sl.Colors.GitForegroundColor
+        $prompt += Write-Prompt -Object " $($themeInfo.VcInfo) " -BackgroundColor $lastColor -ForegroundColor $sl.Colors.PromptSymbolColor
     }
 
     # Writes the postfix to the prompt
@@ -100,12 +100,12 @@ $sl.Colors.PromptSymbolColor = [ConsoleColor]::White
 $sl.Colors.PromptHighlightColor = [ConsoleColor]::DarkBlue
 $sl.Colors.GitForegroundColor = [ConsoleColor]::Black
 $sl.Colors.WithForegroundColor = [ConsoleColor]::DarkRed
-$sl.Colors.WithBackgroundColor = [ConsoleColor]::DarkMagenta
+$sl.Colors.WithBackgroundColor = [ConsoleColor]::DarkCyan
 $sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::DarkRed
 $sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::White
 $sl.Colors.CommandSuccessIconForegroundColor = [System.ConsoleColor]::DarkGreen
 $sl.Colors.CommandFailedIconForegroundColor = [System.ConsoleColor]::DarkRed
 $sl.Colors.PromptIndicatorForegroundColor1 = [ConsoleColor]::DarkBlue
 $sl.Colors.PromptIndicatorForegroundColor2 = [ConsoleColor]::DarkYellow
-$sl.Colors.PromptIndicatorForegroundColor3 = [ConsoleColor]::DarkMagenta
+$sl.Colors.PromptIndicatorForegroundColor3 = [ConsoleColor]::DarkCyan
 $sl.Colors.PromptUserBackgroundColor = [ConsoleColor]::Blue
